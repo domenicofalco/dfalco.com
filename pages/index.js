@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Welcome Ciao</h1>
+      <h1 className={styles.title}>Welcome Ciao mimmo new pipeline</h1>
     </div>
   );
 }
