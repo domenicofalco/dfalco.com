@@ -7,6 +7,7 @@ cache:
 
 stages:
   - build
+  - deploy_production
 
 # Job 1:
 Build:
@@ -14,3 +15,12 @@ Build:
   script:
     - npm install
     - npm run build
+
+# Job 2:
+Production:
+  image: ruby:latest
+  only:
+    - main
+  stage: deploy_production
+  script:
+    - npm run deploy
