@@ -1,18 +1,17 @@
-default:
-  image: node:12
+image: node:12
 
-  stages:
-    - build
+stages:
+  - build
 
-  cache:
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
     paths:
       - node_modules/
-
-  install_dependencies:
-    stage: build
-    script:
-      - npm install
-      - npm run build
-    artifacts:
-      paths:
-        - node_modules/
