@@ -18,7 +18,6 @@ Build:
 
 # Job 2:
 Production:
-  image: ruby:latest
   only:
     - main
   stage: deploy_production
