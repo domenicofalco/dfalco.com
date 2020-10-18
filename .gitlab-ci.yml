@@ -2,6 +2,7 @@ default:
   image: google/cloud-sdk:alpine
   before_script:
     - gcloud config set project dfalco-com
+    - gcloud auth activate-service-account --key-file $GCP_SERVICE_CREDS
 
 build:
   stage: build
