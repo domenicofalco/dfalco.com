@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>dfalco.com - about</title>
+        <title>domenico-falco.com - about</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

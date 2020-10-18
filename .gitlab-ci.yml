@@ -1,17 +1,17 @@
 default:
   image: google/cloud-sdk:alpine
   before_script:
-    - gcloud config set project dfalco-com
+    - gcloud config set project domenico-falco
     - gcloud auth activate-service-account --key-file $GCP_SERVICE_CREDS
 
 build:
   stage: build
   script:
-    - gcloud builds submit --tag gcr.io/dfalco-com/dfalco-com
+    - gcloud builds submit --tag gcr.io/domenico-falco/domenico-falco
 
 deploy:
   stage: deploy
   script:
-    - gcloud run deploy dfalco-com --image gcr.io/dfalco-com/dfalco-com --platform managed --region europe-west4 --allow-unauthenticated
+    - gcloud run deploy domenico-falco --image gcr.io/domenico-falco/domenico-falco --platform managed --region europe-west4 --allow-unauthenticated
   only:
     - main
