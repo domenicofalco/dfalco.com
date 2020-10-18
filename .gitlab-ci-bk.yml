@@ -7,7 +7,6 @@ cache:
 
 stages:
   - build
-  - deploy
 
 # Job 1:
 Build:
@@ -15,11 +14,3 @@ Build:
   script:
     - npm install
     - npm run build
-
-# Job 2:
-Production:
-  stage: deploy
-  script:
-    - echo "Deploy to staging server"
-  only:
-    - main
