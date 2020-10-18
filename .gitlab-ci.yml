@@ -1,13 +1,27 @@
 default:
   image: google/cloud-sdk:alpine
-  before_script:
+
+build_local:
+  stage: build_local
+  script:
+    - npm run build
+  except:
+    - main
+
+auth_prod:
+  stage: auth_prod
+  script:
     - gcloud config set project dfalco-com
     - gcloud auth activate-service-account --key-file $GCP_SERVICE_CREDS
+  only:
+    - main
 
-build:
-  stage: build
+build_prod:
+  stage: build_prod
   script:
     - gcloud builds submit --tag gcr.io/dfalco-com/dfalco-com
+  only:
+    - main
 
 deploy:
   stage: deploy
