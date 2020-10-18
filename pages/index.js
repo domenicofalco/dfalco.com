@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Next.js - homepage</h1>
+      <h1 className={styles.title}>Next.js - this is the homepage</h1>
       <Link href="/mission">go to mission (CSR)</Link>
       <Link href="/about">go to about page (CSR)</Link>
     </div>
