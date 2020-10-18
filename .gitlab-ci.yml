@@ -7,9 +7,9 @@ default:
 build:
   stage: build
   script:
-    - gcloud builds submit --tag gcr.io/dfalco-com/cicd
+    - gcloud builds submit --tag gcr.io/dfalco-com/dfalco-com
 
 deploy:
   stage: deploy
   script:
-    - gcloud run deploy cicd --image gcr.io/dfalco-com/cicd --platform managed --region us-west1 --allow-unauthenticated
+    - gcloud run deploy dfalco-com --image gcr.io/dfalco-com/dfalco-com --platform managed --region europe-west4 --allow-unauthenticated

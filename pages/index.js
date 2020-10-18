@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Test: CI/CD works2</h1>
+      <h1 className={styles.title}>CIAONE: CI/CD works2</h1>
     </div>
   );
 }
