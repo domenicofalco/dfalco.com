@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Welcome to Next.js ciao mimmo</h1>
+      <h1 className={styles.title}>test automatic deployment</h1>
     </div>
   );
 }
