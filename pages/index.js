@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 export default function Home() {
-  console.log({ process: process.env.NODE_ENV });
   return (
     <div className={styles.container}>
       <Head>
