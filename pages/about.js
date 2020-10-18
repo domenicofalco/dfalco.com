@@ -12,6 +12,7 @@ export default function About() {
 
       <h1 className={styles.title}>Next.js - about page</h1>
       <Link href="/">go to homepage (CSR)</Link>
+      <Link href="/mission">go to mission page (CSR)</Link>
     </div>
   );
 }

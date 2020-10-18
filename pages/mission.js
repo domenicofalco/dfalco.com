@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>dfalco.com - homepage</title>
+        <title>dfalco.com - mission</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Next.js - homepage</h1>
-      <Link href="/mission">go to mission (CSR)</Link>
+      <h1 className={styles.title}>Next.js - mission</h1>
+      <Link href="/">go to homepage (CSR)</Link>
       <Link href="/about">go to about page (CSR)</Link>
     </div>
   );
