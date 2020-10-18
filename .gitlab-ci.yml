@@ -13,3 +13,5 @@ deploy:
   stage: deploy
   script:
     - gcloud run deploy dfalco-com --image gcr.io/dfalco-com/dfalco-com --platform managed --region europe-west4 --allow-unauthenticated
+  only:
+    - main
